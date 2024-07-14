@@ -1,0 +1,54 @@
+<main>
+  <section id="gallery-container-mobile">
+    <app-paint-thumbnail *ngFor="let paint of paints" [paint]="paint" />
+  </section>
+
+  <section id="gallery-container-tablet">
+    <div>
+      <app-paint-thumbnail [paint]="paints[0]" />
+      <app-paint-thumbnail [paint]="paints[2]" />
+      <app-paint-thumbnail [paint]="paints[4]" />
+      <app-paint-thumbnail [paint]="paints[6]" />
+      <app-paint-thumbnail [paint]="paints[8]" />
+      <app-paint-thumbnail [paint]="paints[11]" />
+      <app-paint-thumbnail [paint]="paints[13]" />
+    </div>
+    <div>
+      <app-paint-thumbnail [paint]="paints[1]" />
+      <app-paint-thumbnail [paint]="paints[3]" />
+      <app-paint-thumbnail [paint]="paints[5]" />
+      <app-paint-thumbnail [paint]="paints[7]" />
+      <app-paint-thumbnail [paint]="paints[9]" />
+      <app-paint-thumbnail [paint]="paints[10]" />
+      <app-paint-thumbnail [paint]="paints[12]" />
+      <app-paint-thumbnail [paint]="paints[14]" />
+    </div>
+  </section>
+
+  <section id="gallery-container-desktop">
+    <div>
+      <app-paint-thumbnail [paint]="paints[0]" />
+      <app-paint-thumbnail [paint]="paints[4]" />
+      <app-paint-thumbnail [paint]="paints[8]" />
+      <app-paint-thumbnail [paint]="paints[11]" />
+    </div>
+    <div>
+      <app-paint-thumbnail [paint]="paints[1]" />
+      <app-paint-thumbnail [paint]="paints[5]" />
+      <app-paint-thumbnail [paint]="paints[9]" />
+      <app-paint-thumbnail [paint]="paints[12]" />
+    </div>
+    <div>
+      <app-paint-thumbnail [paint]="paints[2]" />
+      <app-paint-thumbnail [paint]="paints[6]" />
+      <app-paint-thumbnail [paint]="paints[13]" />
+    </div>
+    <div>
+      <app-paint-thumbnail [paint]="paints[3]" />
+      <app-paint-thumbnail [paint]="paints[7]" />
+      <app-paint-thumbnail [paint]="paints[10]" />
+      <app-paint-thumbnail [paint]="paints[14]" />
+
+    </div>
+  </section>
+</main>

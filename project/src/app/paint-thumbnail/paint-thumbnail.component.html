@@ -1,0 +1,12 @@
+<article class="thumbnail" routerLink="/detail/{{paint?.name}}">
+  <figure>
+    <img src="../.{{paint?.images?.thumbnail}}" alt="{{paint?.name}} paint">
+  </figure>
+
+  <div class="content">
+    <div>
+      <h3>{{paint?.name}}</h3>
+      <p>{{paint?.artist?.name}}</p>
+    </div>
+  </div>
+</article>
