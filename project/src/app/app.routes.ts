@@ -8,10 +8,18 @@ export const routes: Routes = [
     path: '', component: HomeComponent, title: 'Home'
   },
   {
-    path: 'detail', component: DetailComponent, children: [
+    path: 'detail',
+    redirectTo: 'detail/Starry-Night',
+    pathMatch: 'full'
+  },
+  {
+    path: 'detail/:info',
+    component: DetailComponent,
+    children: [
       {
-        path: ':info', component: InfoComponent
+        path: '',
+        component: InfoComponent
       }
     ]
-  }
+  },
 ];

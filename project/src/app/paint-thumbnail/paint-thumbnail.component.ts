@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Paint } from '../model/paint.model';
 import { RouterLink } from '@angular/router';
 
@@ -11,4 +11,8 @@ import { RouterLink } from '@angular/router';
 })
 export class PaintThumbnailComponent {
   @Input() paint: Paint | undefined;
+
+  public formatName(name: string | undefined): string {
+    return name ? name.replace(/ /g, '-') : '';
+  }
 }
