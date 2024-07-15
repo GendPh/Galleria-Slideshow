@@ -1,0 +1,68 @@
+#hero {
+  position: relative;
+
+  #hero-paint {
+    width: 100%;
+  }
+
+  #paint-info {
+    max-width: 80%;
+    padding: 24px;
+    position: absolute;
+    top: calc(100% - 50px);
+    background-color: white;
+
+    h2 {
+      font-size: 24px;
+      line-height: 29px;
+      margin-bottom: 8px;
+    }
+    p {
+      font-size: 15px;
+      color: var(--secondary-text);
+      font-weight: 400;
+    }
+  }
+
+  #paint-author {
+    width: 64px;
+    aspect-ratio: 1/1;
+    position: absolute;
+    top: 100%;
+    left: 16px;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+#paint-detail {
+  margin-top: 172px;
+  margin-bottom: 100px;
+  position: relative;
+
+  #year {
+    font-size: 100px;
+    line-height: 50px;
+    color: #f3f3f3;
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    z-index: 0;
+  }
+
+  p {
+    position: relative;
+    font-size: 14px;
+    line-height: 28px;
+    color: var(--secondary-text);
+  }
+
+  a {
+    display: block;
+    color: var(--secondary-text);
+    font-size: 9px;
+    letter-spacing: 1.93px;
+    margin-top: 40px;
+  }
+}

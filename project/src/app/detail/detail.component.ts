@@ -25,9 +25,11 @@ export class DetailComponent implements OnInit {
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       this.galleryService.getPaint(params.get('info')!).subscribe(paint => {
+        
         if (paint === undefined) {
           this.router.navigate(['']);
         }
+
         this.paint = paint;
       });
     });

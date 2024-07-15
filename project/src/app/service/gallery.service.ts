@@ -19,18 +19,31 @@ export class GalleryService {
   getPaint(name: string): Observable<Paint> {
     return this.getGallery().pipe(
       map((paints) => {
-        const paintName = name.replace(/-/g, ' ');
+        const paintName = name.replace(/_/g, ' ');
         return paints.find(paint => paint.name === paintName)!;
       })
     );
   }
 
-  getPreviousPaintName(name: string): Observable<string> {
+  getPreviousPaintName(name: string): Observable<Paint> {
     return this.getGallery().pipe(
       map((paints) => {
-        const paintName = name.replace(/-/g, ' ');
+        const paintName = name.replace(/_/g, ' ');
         const index = paints.findIndex(paint => paint.name === paintName);
-        return paints[index - 1].name;
+        if (index === 0) {
+          throw new Error('No previous paint');
+        }
+        return paints[index - 1];
+      })
+    );
+  }
+
+  getNextPaintName(name: string): Observable<Paint> {
+    return this.getGallery().pipe(
+      map((paints) => {
+        const paintName = name.replace(/_/g, ' ');
+        const index = paints.findIndex(paint => paint.name === paintName);
+        return paints[index + 1];
       })
     );
   }

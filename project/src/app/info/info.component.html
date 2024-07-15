@@ -1,1 +1,25 @@
-<p>info works! {{paintName}}</p>
+<section id="hero">
+  <article>
+    <figure>
+      <img id="hero-paint" src="../.{{paint?.images?.hero?.small}}" alt="{{paint?.name}} paint">
+    </figure>
+
+    <div id="paint-info">
+      <h2>{{paint?.name}}</h2>
+      <p>{{paint?.artist?.name}}</p>
+
+      <figure id="paint-author">
+        <img src="../.{{paint?.artist?.image}}" alt="{{paint?.artist?.name}}">
+      </figure>
+    </div>
+  </article>
+</section>
+
+<section id="paint-detail">
+  <article>
+    <div id="year">{{paint?.year}}</div>
+    <p>{{paint?.description}}</p>
+
+    <a href="{{paint?.source}}" target="_blank">GO TO SOURCE</a>
+  </article>
+</section>

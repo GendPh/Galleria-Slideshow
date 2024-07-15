@@ -1,3 +1,17 @@
 <footer>
-  
+  <div class="loader">
+    <div class="bar" style="--progress: 20%;"></div>
+  </div>
+
+  <div>
+    <h3>{{paint?.name}}</h3>
+    <p>{{paint?.artist?.name}}</p>
+  </div>
+
+  <div class="buttons">
+    <button class="before" (click)="previousPaint()" [ngClass]="{'unavailable': paint?.name === 'Starry Night'}">
+    </button>
+    <button (click)="nextPaint()" class="next" [ngClass]="{'unavailable': paint?.name === 'The Swing'}">
+    </button>
+  </div>
 </footer>

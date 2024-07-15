@@ -13,6 +13,6 @@ export class PaintThumbnailComponent {
   @Input() paint: Paint | undefined;
 
   public formatName(name: string | undefined): string {
-    return name ? name.replace(/ /g, '-') : '';
+    return name ? name.replace(/ /g, '_') : '';
   }
 }
