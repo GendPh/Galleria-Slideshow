@@ -12,10 +12,6 @@ footer {
     padding: 25px 40px 24px;
   }
 
-  @media (min-width: 1280px) {
-    position: relative;
-  }
-
   .loader {
     position: absolute;
     top: 0;

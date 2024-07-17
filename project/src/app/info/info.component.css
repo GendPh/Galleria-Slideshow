@@ -1,10 +1,11 @@
 #info-container {
   display: grid;
   margin-bottom: 100px;
+  width: fit-content;
+  margin: 0 auto;
   @media (min-width: 1280px) {
     grid-template-columns: minmax(0, 855px) minmax(0, 476px);
     gap: 29px;
-    margin-inline: auto;
   }
 }
 
