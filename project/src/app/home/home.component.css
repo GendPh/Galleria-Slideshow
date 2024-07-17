@@ -22,7 +22,7 @@
     display: grid;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1280px) {
     display: none;
   }
 }
@@ -39,7 +39,7 @@
     gap: 40px;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1280px) {
     display: grid;
   }
 }

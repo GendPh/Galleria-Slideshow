@@ -1,27 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 :root {
   --primary-text: #ffffff;
   --secondary-text: #7d7d7d;
   --primary-border-color: #e5e5e5;
 }
-
 body {
   font-family: 'Libre Baskerville', serif;
   font-weight: bold;
   background-color: #ffffff;
-
-  &.no-scroll{
+  &.no-scroll {
     overflow: hidden;
   }
 }
-
 main {
   padding: 24px;
+  @media (min-width: 768px) {
+    padding: 40px;
+  }
 }

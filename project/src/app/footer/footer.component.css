@@ -8,6 +8,14 @@ footer {
   width: 100%;
   background-color: white;
 
+  @media (min-width: 768px) {
+    padding: 25px 40px 24px;
+  }
+
+  @media (min-width: 1280px) {
+    position: relative;
+  }
+
   .loader {
     position: absolute;
     top: 0;
@@ -29,17 +37,28 @@ footer {
   h3 {
     font-size: 14px;
     margin-bottom: 9px;
+
+    @media (min-width: 768px) {
+      font-size: 18px;
+    }
   }
   p {
     font-weight: 400;
     font-size: 10px;
     opacity: 75%;
+    @media (min-width: 768px) {
+      font-size: 13px;
+    }
   }
 
   .buttons {
     display: flex;
     align-items: center;
     gap: 23px;
+    @media (min-width: 768px) {
+      gap: 40px;
+    }
+
     button {
       width: 16px;
       aspect-ratio: 1/1;
@@ -63,6 +82,10 @@ footer {
       &.unavailable {
         opacity: 15%;
         pointer-events: none;
+      }
+
+      @media (min-width: 768px) {
+        width: 25px;
       }
     }
   }

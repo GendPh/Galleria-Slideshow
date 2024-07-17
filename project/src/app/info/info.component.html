@@ -1,26 +1,29 @@
-<section id="hero">
-  <article>
-    <app-light-box-img [imgSrc]="paint?.images?.gallery" />
-    <figure>
-      <img id="hero-paint" src="../.{{paint?.images?.hero?.small}}" alt="{{paint?.name}} paint">
-    </figure>
-
-    <div id="paint-info">
-      <h2>{{paint?.name}}</h2>
-      <p>{{paint?.artist?.name}}</p>
-
-      <figure id="paint-author">
-        <img src="../.{{paint?.artist?.image}}" alt="{{paint?.artist?.name}}">
+<section id="info-container">
+  <article id="hero">
+    <div>
+      <figure >
+        <app-light-box-img [imgSrc]="paint?.images?.gallery" />
+        <img class="hero-paint" src="../.{{paint?.images?.hero?.small}}" alt="{{paint?.name}} paint">
+        <img class="hero-paint" src="../.{{paint?.images?.hero?.large}}" alt="{{paint?.name}} paint">
       </figure>
+
+      <div id="paint-info">
+        <h2>{{paint?.name}}</h2>
+        <p>{{paint?.artist?.name}}</p>
+
+        <figure id="paint-author">
+          <img src="../.{{paint?.artist?.image}}" alt="{{paint?.artist?.name}}">
+        </figure>
+      </div>
     </div>
   </article>
-</section>
 
-<section id="paint-detail">
-  <article>
-    <div id="year">{{paint?.year}}</div>
-    <p>{{paint?.description}}</p>
+  <article id="paint-detail">
+    <div>
+      <div id="year">{{paint?.year}}</div>
+      <p>{{paint?.description}}</p>
 
-    <a href="{{paint?.source}}" target="_blank">GO TO SOURCE</a>
+      <a href="{{paint?.source}}" target="_blank">GO TO SOURCE</a>
+    </div>
   </article>
 </section>
