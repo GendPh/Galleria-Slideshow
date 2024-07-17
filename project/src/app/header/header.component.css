@@ -22,5 +22,10 @@ header {
     letter-spacing: 1.93px;
     color: var(--secondary-text);
     cursor: pointer;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: black;
+    }
   }
 }
