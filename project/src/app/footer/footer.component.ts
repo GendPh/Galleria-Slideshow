@@ -15,11 +15,14 @@ import { CommonModule } from '@angular/common';
 export class FooterComponent {
   @Input() paint: Paint | undefined;
   previousPaintAvailable: boolean = false;
+  slideTimer: number = 0;
 
   constructor(
     private galleryService: GalleryService,
     private router: Router
-  ) { }
+  ) {
+    this.galleryService.slideTimer$.subscribe(time => this.slideTimer = time);
+  }
 
 
   public nextPaint(): void {
@@ -42,6 +45,6 @@ export class FooterComponent {
         }
       }
     );
-
   }
+
 }

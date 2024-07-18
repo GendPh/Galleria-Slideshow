@@ -19,6 +19,7 @@ body {
 }
 main {
   padding: 24px;
+  margin-bottom: 100px;
   @media (min-width: 768px) {
     padding: 40px;
   }

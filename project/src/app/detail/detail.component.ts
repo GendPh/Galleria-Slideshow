@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { InfoComponent } from '../info/info.component';
 import { HeaderComponent } from '../header/header.component';
 import { ActivatedRoute, Router, RouterLink, RouterOutlet } from '@angular/router';
@@ -13,7 +13,7 @@ import { GalleryService } from '../service/gallery.service';
   templateUrl: './detail.component.html',
   styleUrl: './detail.component.css'
 })
-export class DetailComponent implements OnInit {
+export class DetailComponent implements OnInit, OnDestroy {
   paint: Paint | undefined;
 
   constructor(
@@ -25,13 +25,23 @@ export class DetailComponent implements OnInit {
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       this.galleryService.getPaint(params.get('info')!).subscribe(paint => {
-        
+
         if (paint === undefined) {
           this.router.navigate(['']);
+          return;
         }
+
+        this.galleryService.getPaintIndex(paint.name).subscribe(index =>
+          this.galleryService.getOnGoingPage(index)
+        );
 
         this.paint = paint;
       });
     });
+  }
+
+  ngOnDestroy(): void {
+    this.galleryService.stopCountTimer();
+    this.galleryService.setCounterToZero();
   }
 }

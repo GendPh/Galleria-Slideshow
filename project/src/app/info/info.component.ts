@@ -20,7 +20,6 @@ export class InfoComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       this.paintName = params['info'];
-      console.log(this.paintName);
 
       window.scrollTo(0, 0);
 

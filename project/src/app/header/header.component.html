@@ -3,5 +3,9 @@
     <img src="../../assets/shared/logo.svg" alt="logo galleria.">
   </figure>
 
-  <p>START SLIDESHOW</p>
+  @if(!galleryService.isCounting()){
+  <p (click)="startTimer()">START SLIDESHOW</p>
+  }@else {
+  <p (click)="stopTimer()">STOP SLIDESHOW</p>
+  }
 </header>
